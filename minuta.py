@@ -54,16 +54,17 @@ class AlimentationMonthly:
     def to_dataframe(self):
         return pd.DataFrame(self.dictionary_food).T
 
-def load_data(path_minuta, path_foods, days=31, quantity=1):
+def load_data(path_minuta, path_foods, path_school, days=31, quantity=1):
     df_foods = pd.read_csv(path_foods)
     df_minuta = pd.read_csv(path_minuta)
     set_foods = get_set_foods(df_foods)
+    df_school = pd.read_csv(path_school)
 
     AM = AlimentationMonthly(set_foods, days, quantity)
     AM.load_foods(df_minuta)
     df_am = AM.to_dataframe()
     df_am.to_csv('minutas/{}-minuta.csv'.format(path_minuta.split('.')[0]))
-    return (df_am, df_foods)
+    return (df_am, df_foods, df_school)
 
 def get_set_foods(df):    
-    return  set(df['AlIMENTO'].unique())
+    return  set(df['ALIMENTO'].unique())
