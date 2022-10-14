@@ -56,8 +56,8 @@ if __name__ == '__main__':
     # en el dia "t"
     X_a_c_t = model.addVars(A, C, T, vtype=GRB.INTEGER, name='X_a_c_t')
 
-    # Variable binaria que indica si se envía el alimento $a$ al colegio
-    # $c$ al inicio del día $t$:
+    # Variable binaria que indica si se envía el alimento "a" al colegio
+    # "c" al inicio del día "t":
     x_a_c_t = model.addVars(A, C, T, vtype=GRB.BINARY, name='x_a_c_t')
 
     # Volumen de alimento "a" que se echó a perder en el colegio "c"
@@ -87,7 +87,7 @@ if __name__ == '__main__':
         name='r1')
 
     # Restriccion 2
-    # El volumen al final del dia $t$ de todos los colegios es el volumen
+    # El volumen al final del dia "t" de todos los colegios es el volumen
     # al final del dia "t-1" mas el volumen que llego al inicio del dia "t"
     # menos el volumen que se consumido en el dia "t" menos el volumen que
     # se echa a perder al final del dia "t":
@@ -98,8 +98,8 @@ if __name__ == '__main__':
         name='r2')
 
     # Restriccion 3
-    # El colegio $c$ no puede tener mas volumen de alimento $a$ al final
-    # del dia $t$ que el volumen máximo de almacenaje del colegio $c$:
+    # El colegio "c" no puede tener mas volumen de alimento "a" al final
+    # del dia "t" que el volumen máximo de almacenaje del colegio "c":
     model.addConstrs(
         (Z_a_c_t[a, c, t] <= V_max_c[c] for a in A for c in C for t in T),
         name='r3')
@@ -132,8 +132,8 @@ if __name__ == '__main__':
         name='r6')
 
     # Restriccion 7
-    # Si no se hizo un envío es decir, $x_{a,c,t} = 0$, entonces el volumen
-    # de alimento $a$ que llega al colegio $c$ al inicio del día $t$ es $0$
+    # Si no se hizo un envío es decir, "x_{a,c,t} = 0", entonces el volumen
+    # de alimento "a" que llega al colegio "c" al inicio del día "t" es "0"
 
     model.addConstrs(
         (X_a_c_t[a, c, t] <= INF*(1 - x_a_c_t[a, c, t])
@@ -141,9 +141,9 @@ if __name__ == '__main__':
         name='r7_1')
 
     # Restriccion 8
-    # No puede haber alimentos que llegaron al colegio $c$ el dia $t_1$ y que no
-    # se consumieron o desecharon al final del dia $t_2$ de modo que
-    # $t_2 - t_1 > c_a$
+    # No puede haber alimentos que llegaron al colegio "c" el dia "t_1" y que no
+    # se consumieron o desecharon al final del dia "t_2" de modo que
+    # "t_2 - t_1 > c_a"
 
     model.addConstrs(
         (W_a_c_t1_t2[a, c, t1, t2] * (t2 - t1 - c_a[a]) <=
@@ -151,16 +151,16 @@ if __name__ == '__main__':
         name='r8')
 
     # Restriccion 9
-    # El volumen almacenado al final del dia $t$ es igual a la suma de los
+    # El volumen almacenado al final del dia "t" es igual a la suma de los
     # volúmenes que llegaron al inicio los días anteriores o igual al dia
-    # $t$ y que no se consumieron o desecharon al final de estos
+    # "t" y que no se consumieron o desecharon al final de estos
     model.addConstrs(
         (Z_a_c_t[a, c, t] == quicksum(W_a_c_t1_t2[a, c, t1, t]
          for t1 in T if t1 <= t) for a in A for c in C for t in T if t > 0),
         name='r9')
 
     # Restriccion 10
-    # Asignamos $0$ a todos los $w_{a,c,t_1,t_2}$ que no se usan
+    # Asignamos "0" a todos los "w_{a,c,t_1,t_2}" que no se usan
     model.addConstrs(
         (W_a_c_t1_t2[a, c, t1, t2] ==
          0 for a in A for c in C for t1 in T for t2 in T if t1 > t2),
@@ -169,19 +169,19 @@ if __name__ == '__main__':
     # Restricciones de naturalezas de las variables
 
     # Restriccion 11
-    # Las variables $X_{a,c,t}$ son no negativas
+    # Las variables "X_{a,c,t}" son no negativas
     model.addConstrs(
         (X_a_c_t[a, c, t] >= 0 for a in A for c in C for t in T if t > 0),
         name='r11')
 
     # Restriccion 12
-    # Las variables $Y_{a,c,t}$ son no negativas
+    # Las variables "Y_{a,c,t}" son no negativas
     model.addConstrs(
         (Y_a_c_t[a, c, t] >= 0 for a in A for c in C for t in T if t > 0),
         name='r12')
 
     # Restriccion 13
-    # Las variables $Z_{a,c,t}$ son no negativas
+    # Las variables "Z_{a,c,t}" son no negativas
     model.addConstrs(
         (Z_a_c_t[a, c, t] >= 0 for a in A for c in C for t in T if t > 0),
         name='r13')
