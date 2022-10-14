@@ -1,13 +1,16 @@
 from gurobipy import Model, GRB, quicksum
-from gurobipy.GRB import INFINITY as INF
-from minuta import load_data
+from data_loader import load_data
 
 if __name__ == '__main__':
-    df_am, df_foods, df_schools = load_data(
-        'alimentation-monthly.csv', 'foods.csv', 'colegios.csv')
+    df_fs, df_foods, df_schools = load_data(
+        'feeding_schedule.csv', 'foods.csv', 'schools.csv')
 
     print(df_foods)
-    print(len(df_foods['DIAS CADUCIDAD']))
+    print(df_foods)
+    print(df_foods)
+
+    # Creamos un numero arbitrariamente grande
+    INF = 1000000000000000
 
     # Definicion de los conjuntos
 
@@ -48,7 +51,7 @@ if __name__ == '__main__':
     # el día "t"
     v_a_c_t = {(a, c, t): df_foods.loc[c-1, 'CANTIDAD ALUMNOS']
          * df_foods.loc[a-1, 'VOLUMEN']
-         * df_am.loc[t-1, df_foods.loc[a-1, 'ALIMENTO']] for c in C for t in T for a in A}
+         * df_fs.loc[t-1, df_foods.loc[a-1, 'ALIMENTO']] for c in C for t in T for a in A}
 
     # Creacion del modelo
     model = Model()
