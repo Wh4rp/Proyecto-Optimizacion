@@ -2,16 +2,17 @@ import pandas as pd
 import numpy as np
 
 def load_data(file_fs, file_foods, file_school, days=31, quantity=1):
-    df_foods = pd.read_csv('data/{}'.format(file_fs))
-    df_minuta = pd.read_csv('data/{}'.format(file_foods))
+    df_fs = pd.read_csv('data/{}'.format(file_fs))
+    df_foods = pd.read_csv('data/{}'.format(file_foods))
     df_school = pd.read_csv('data/{}'.format(file_school))
 
     set_foods = get_set_foods(df_foods)
     FS = AlimentationMonthly(set_foods, days, quantity)
-    FS.load_foods(df_minuta)
+    FS.load_foods(df_fs)
     df_fs = FS.to_dataframe()
     df_fs.to_csv('data/{}_out.csv'.format(file_fs.split('.')[0]))
-    return (df_fs, df_foods, df_school)
+
+    return df_fs, df_foods, df_school
 
 def read_food(path):
     df = pd.read_csv(path)
