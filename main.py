@@ -23,14 +23,14 @@ if __name__ == '__main__':
     # Volumen de cada alimento
     v_a = {a: df_foods.loc[a-1, 'VOLUMEN'] for a in A}
 
-    # Volumen máximo que se puede trasladar desde CA
-    V_max = 1000
+    # Volumen máximo que se puede trasladar desde CA en cm3
+    V_max = 1500
 
-    # Volumen mínimo que se puede trasladar desde CA
-    V_min = 100
+    # Volumen mínimo que se puede trasladar desde CA en cm3
+    V_min = 3000
 
-    # Peso máximo que puede llevar un camión
-    P_max = 1000
+    # Peso máximo que puede llevar un camión en gramos
+    P_max = 2500000
 
     # Densidad de cada alimento "a"
     d_a = {a: df_foods.loc[a-1, 'DENSIDAD'] for a in A}
