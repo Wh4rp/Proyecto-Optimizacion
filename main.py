@@ -6,7 +6,7 @@ if __name__ == '__main__':
         'feeding_schedule.csv', 'foods.csv', 'schools.csv')
 
     # Creamos un numero arbitrariamente grande
-    INF = 1000000000000000
+    INF = 100000000000000000000000000000000000000000000000000000000000000000000
 
     # Definicion de los conjuntos
 
@@ -23,13 +23,13 @@ if __name__ == '__main__':
     v_a = {a: df_foods.loc[a-1, 'VOLUMEN'] for a in A}
 
     # Volumen máximo que se puede trasladar desde CA en cm3
-    V_max = 1500
+    V_max = 1500000000000000000
 
     # Volumen mínimo que se puede trasladar desde CA en cm3
-    V_min = 3000
+    V_min = 0
 
     # Peso máximo que puede llevar un camión en gramos
-    P_max = 2500000
+    P_max = 2500000000000000000
 
     # Densidad de cada alimento "a"
     d_a = {a: df_foods.loc[a-1, 'DENSIDAD'] for a in A}
@@ -185,6 +185,12 @@ if __name__ == '__main__':
     model.addConstrs(
         (Z_a_c_t[a, c, t] >= 0 for a in A for c in C for t in T if t > 0),
         name='r13')
+    
+    # Restriccion 14
+    # Las variables "W_{a,c,t_1,t_2}" son no negativas
+    model.addConstrs(
+        (W_a_c_t1_t2[a, c, t1, t2] >= 0 for a in A for c in C for t1 in T for t2 in T if t1 <= t2),
+        name='r14')
     
     # Optimizamos
     model.optimize()
