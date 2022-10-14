@@ -1,5 +1,6 @@
 from gurobipy import Model, GRB, quicksum
 from data_loader import load_data
+from math import ceil
 
 if __name__ == '__main__':
     df_fs, df_foods, df_schools = load_data(
@@ -23,13 +24,13 @@ if __name__ == '__main__':
     v_a = {a: df_foods.loc[a-1, 'VOLUMEN'] for a in A}
 
     # Volumen máximo que se puede trasladar desde CA en cm3
-    V_max = 1500000000000000000
+    V_max = 1500000
 
     # Volumen mínimo que se puede trasladar desde CA en cm3
     V_min = 0
 
     # Peso máximo que puede llevar un camión en gramos
-    P_max = 2500000000000000000
+    P_max = 2500000
 
     # Densidad de cada alimento "a"
     d_a = {a: df_foods.loc[a-1, 'DENSIDAD'] for a in A}
@@ -53,21 +54,26 @@ if __name__ == '__main__':
 
     # Defincion de las variables de decision
 
+    # Variable 1
     # Volumen de alimento "a" que se traslada desde el CA al colegio "c"
     # en el dia "t"
     X_a_c_t = model.addVars(A, C, T, vtype=GRB.INTEGER, name='X_a_c_t')
 
+    # Variable 2
     # Variable binaria que indica si se envía el alimento "a" al colegio
     # "c" al inicio del día "t":
     x_a_c_t = model.addVars(A, C, T, vtype=GRB.BINARY, name='x_a_c_t')
 
+    # Variable 3
     # Volumen de alimento "a" que se echó a perder en el colegio "c"
     # en el dia "t"
     Y_a_c_t = model.addVars(A, C, T, vtype=GRB.INTEGER, name='Y_a_c_t')
 
+    # Variable 4
     # Volumen de alimento "a" en el colegio "c" en el dia "t"
     Z_a_c_t = model.addVars(A, C, T, vtype=GRB.INTEGER, name='Z_a_c_t')
 
+    # # Variable 5
     # Volumen del alimento "a" en el colegio "c" que llego en el dia "t_1"
     # y que aun no se ha consumido o desechado en el dia "t_2"
     W_a_c_t1_t2 = model.addVars(
@@ -76,7 +82,7 @@ if __name__ == '__main__':
     # Funcion objetivo
 
     model.setObjective(
-        quicksum(Y_a_c_t[a, c, t] for a in A for c in C for t in T),
+        quicksum(Y_a_c_t[a, c, t] for a in A for c in C for t in T if t > 0),
         GRB.MINIMIZE)
 
     # Definicion de restricciones
@@ -94,7 +100,7 @@ if __name__ == '__main__':
     # se echa a perder al final del dia "t":
     model.addConstrs(
         (Z_a_c_t[a, c, t] == Z_a_c_t[a, c, t-1] + X_a_c_t[a, c, t]
-         - v_a_c_t[a, c, t] - Y_a_c_t[a, c, t]
+         - ceil(v_a_c_t[a, c, t]) - Y_a_c_t[a, c, t]
             for a in A for c in C for t in T if t > 0),
         name='r2')
 
@@ -129,17 +135,29 @@ if __name__ == '__main__':
     # el tiempo mínimo entre pedidos
     model.addConstrs(
         (quicksum(x_a_c_t[a, c, t2] for t2 in T if t1 <= t2 <= t1 + t_min[c]) <= 1
-         for c in C for a in A for t1 in T if 0 < t1 < T[-1] - t_min[c]),
+         for a in A for c in C for t1 in T if 0 < t1 < T[-1] - t_min[c]),
         name='r6')
 
     # Restriccion 7
-    # Si no se hizo un envío es decir, "x_{a,c,t} = 0", entonces el volumen
-    # de alimento "a" que llega al colegio "c" al inicio del día "t" es "0"
-
+    # No se hizo un envio del alimento "a" el dia t, es decir "x_{a,c,t} = 0",
+    # si y solo si
+    # el volumen de alimento "a" que llega al colegio "c" al inicio del día "t"
+    # igual a 0
     model.addConstrs(
-        (X_a_c_t[a, c, t] <= INF*(1 - x_a_c_t[a, c, t])
+        (x_a_c_t[a, c, t] <= X_a_c_t[a, c, t]
          for a in A for c in C for t in T if t > 0),
         name='r7_1')
+
+    model.addConstrs(
+        (INF*x_a_c_t[a, c, t] >= X_a_c_t[a, c, t]
+         for a in A for c in C for t in T if t > 0),
+        name='r7_2')
+
+    #                 r_7_1   |  r_7_2
+    # x = 0 -> X = 0   PASS   |  CHECK
+    # x = 1 -> X > 0   CHECK  |  PASS
+    # X = 0 -> x = 0   CHECK  |  PASS
+    # X > 0 -> x = 1   PASS   |  CHECK
 
     # Restriccion 8
     # No puede haber alimentos que llegaron al colegio "c" el dia "t_1" y que no
@@ -172,19 +190,19 @@ if __name__ == '__main__':
     # Restriccion 11
     # Las variables "X_{a,c,t}" son no negativas
     model.addConstrs(
-        (X_a_c_t[a, c, t] >= 0 for a in A for c in C for t in T if t > 0),
+        (X_a_c_t[a, c, t] >= 0 for a in A for c in C for t in T),
         name='r11')
 
     # Restriccion 12
     # Las variables "Y_{a,c,t}" son no negativas
     model.addConstrs(
-        (Y_a_c_t[a, c, t] >= 0 for a in A for c in C for t in T if t > 0),
+        (Y_a_c_t[a, c, t] >= 0 for a in A for c in C for t in T),
         name='r12')
 
     # Restriccion 13
     # Las variables "Z_{a,c,t}" son no negativas
     model.addConstrs(
-        (Z_a_c_t[a, c, t] >= 0 for a in A for c in C for t in T if t > 0),
+        (Z_a_c_t[a, c, t] >= 0 for a in A for c in C for t in T),
         name='r13')
 
     # Restriccion 14
@@ -196,3 +214,17 @@ if __name__ == '__main__':
 
     # Optimizamos
     model.optimize()
+
+    # Imprimimos la solucion
+    if model.status == GRB.Status.OPTIMAL:
+        # Guardar en solution.txt  los envios
+        # hechos a cada colegio mayores a 0
+        with open('solution.txt', 'w') as f:
+            for c in C:
+                f.write('Colegio: {}\n'.format(c))
+                for t in T[1:]:
+                    for a in A:
+                        if X_a_c_t[a, c, t].x > 0:
+                            f.write('Se envia {} de {} en el dia {}\n'.format(
+                                X_a_c_t[a, c, t].x, df_foods.loc[a-1, 'ALIMENTO'], t))
+                f.write('-'*20 + '\n')

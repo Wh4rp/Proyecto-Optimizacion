@@ -168,10 +168,16 @@ $$
 \sum_{t_2 \in \{t_1, t_1+1, \ldots, t_1+t^c_{min}\}} x_{a,c,t_2} \leq 1 \quad \forall a \in A, \forall c \in C, \forall t_1 \in \{1, 2, \ldots, |T|-t^c_{min}\}
 $$
 
-- Si no se hizo un envío es decir, $x_{a,c,t} = 0$, entonces el volumen de alimento $a$ que llega al colegio $c$ al inicio del día $t$ es $0$:
+- No se hizo un envío del alimento $a$ el dia $t$, es decir $x_{a,c,t} = 0$, si y solo si el volumen de alimento "a" que llega al colegio "c" al inicio del día "t" es igual a 0:
 
 $$
-X_{a,c,t} \leq M \cdot (1 - x_{a,c,t}) \quad \forall a \in A, \forall c \in C, \forall t \in T \setminus \{0\}
+x_{a,c,t} \leq X_{a,c,t} \quad \forall a \in A, \forall c \in C, \forall t \in T \setminus \{0\}
+$$
+
+y,
+
+$$
+M \cdot x_{a,c,t} \geq X_{a,c,t} \quad \forall a \in A, \forall c \in C, \forall t \in T \setminus \{0\}
 $$
 
 con $M$ un numero arbitrariamente grande.
