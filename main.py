@@ -42,10 +42,11 @@ if __name__ == '__main__':
 
     # Volumen maximo de almacenaje en el colegio "c"
     V_max_c = {c: df_schools.loc[c-1, 'VOLUMEN MAXIMO'] for c in C}
-    
+
     # Volumen de alimento "a" consumido por el colegio "c" en
     # el día "t"
-    v_a_c_t = {(a, c, t): n_c[c] * v_a[a] * df_fs.loc[t, df_foods.loc[a-1, 'ALIMENTO']] for a in A for c in C for t in T if t > 0}
+    v_a_c_t = {(a, c, t): n_c[c] * v_a[a] * df_fs.loc[t, df_foods.loc[a-1, 'ALIMENTO']]
+               for a in A for c in C for t in T if t > 0}
 
     # Creacion del modelo
     model = Model()
@@ -185,12 +186,13 @@ if __name__ == '__main__':
     model.addConstrs(
         (Z_a_c_t[a, c, t] >= 0 for a in A for c in C for t in T if t > 0),
         name='r13')
-    
+
     # Restriccion 14
     # Las variables "W_{a,c,t_1,t_2}" son no negativas
     model.addConstrs(
-        (W_a_c_t1_t2[a, c, t1, t2] >= 0 for a in A for c in C for t1 in T for t2 in T if t1 <= t2),
+        (W_a_c_t1_t2[a, c, t1, t2] >=
+         0 for a in A for c in C for t1 in T for t2 in T if t1 <= t2),
         name='r14')
-    
+
     # Optimizamos
     model.optimize()
