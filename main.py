@@ -185,3 +185,6 @@ if __name__ == '__main__':
     model.addConstrs(
         (Z_a_c_t[a, c, t] >= 0 for a in A for c in C for t in T if t > 0),
         name='r13')
+    
+    # Optimizamos
+    model.optimize()
