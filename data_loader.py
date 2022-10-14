@@ -1,6 +1,18 @@
 import pandas as pd
 import numpy as np
 
+def load_data(file_fs, file_foods, file_school, days=31, quantity=1):
+    df_foods = pd.read_csv('data/{}'.format(file_fs))
+    df_minuta = pd.read_csv('data/{}'.format(file_foods))
+    df_school = pd.read_csv('data/{}'.format(file_school))
+
+    set_foods = get_set_foods(df_foods)
+    FS = AlimentationMonthly(set_foods, days, quantity)
+    FS.load_foods(df_minuta)
+    df_fs = FS.to_dataframe()
+    df_fs.to_csv('data/{}_out.csv'.format(file_fs.split('.')[0]))
+    return (df_fs, df_foods, df_school)
+
 def read_food(path):
     df = pd.read_csv(path)
     return df
@@ -53,18 +65,6 @@ class AlimentationMonthly:
     # return dataframe pandas
     def to_dataframe(self):
         return pd.DataFrame(self.dictionary_food).T
-
-def load_data(path_minuta, path_foods, path_school, days=31, quantity=1):
-    df_foods = pd.read_csv(path_foods)
-    df_minuta = pd.read_csv(path_minuta)
-    set_foods = get_set_foods(df_foods)
-    df_school = pd.read_csv(path_school)
-
-    AM = AlimentationMonthly(set_foods, days, quantity)
-    AM.load_foods(df_minuta)
-    df_am = AM.to_dataframe()
-    df_am.to_csv('minutas/{}-minuta.csv'.format(path_minuta.split('.')[0]))
-    return (df_am, df_foods, df_school)
 
 def get_set_foods(df):    
     return  set(df['ALIMENTO'].unique())
