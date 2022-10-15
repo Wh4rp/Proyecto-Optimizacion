@@ -1,0 +1,18 @@
+Conjuntos:
+I: alimentos
+V_i: {0, ..., Max_i}
+T = dias
+
+Variables:
+x_i,t,v: inventario del producto i el dia t que vence en v dias
+y_i,t: auxiliar del inventario
+d2_i,t,v: demanda auxiliar del producto i el dia t que vence en v dias
+w_i,t: cuanto compro del producto i el dia t
+d_i,t: demanda del producto i el dia t
+
+
+y_i,t = y_i,(t-1) + w_i,t - (x_i,t-1,0 - d2_i,t-1,0) - d_i,t HECHO
+x_i,t + 1,v - 1 = x_i,t,v - d2_i,t,v HECHO
+y_i,t = sum_v x_i,t,v HECHO
+x_i,t,V_i = w_i,t HECHO
+sum_v d2_i,t,v = d_i,t HECHO

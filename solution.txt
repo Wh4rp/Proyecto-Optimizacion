@@ -85,346 +85,269 @@ Se envia 86880.0 de AVENA en el dia 28
 Se envia 45250.0 de FRUTOS SECOS en el dia 28
 --------------------
 Colegio: 2
+Se envia 7019.0 de ZANAHORIA en el dia 2
+Se envia 7038.0 de HUEVO en el dia 2
+Se envia 14243.0 de FIDEOS en el dia 2
+Se envia 7994.0 de MANDARINAS en el dia 2
 Se envia 31062.0 de TOMATE en el dia 3
-Se envia 19462.0 de MANZANA en el dia 3
-Se envia 3519.0 de HUEVO en el dia 3
+Se envia 38924.0 de MANZANA en el dia 3
+Se envia 18688.0 de PAN BLANCO en el dia 3
 Se envia 9125.0 de YOGURT en el dia 3
-Se envia 14243.0 de FIDEOS en el dia 3
-Se envia 7994.0 de MANDARINAS en el dia 3
-Se envia 7019.0 de ZANAHORIA en el dia 4
+Se envia 10806.0 de LIMON en el dia 4
+Se envia 30931.0 de PERA en el dia 4
 Se envia 19462.0 de MANZANA en el dia 4
-Se envia 3519.0 de HUEVO en el dia 4
-Se envia 18688.0 de PAN BLANCO en el dia 4
-Se envia 10806.0 de LIMON en el dia 5
-Se envia 30931.0 de PERA en el dia 5
-Se envia 5840.0 de PAN INTEGRAL en el dia 5
-Se envia 9125.0 de YOGURT en el dia 5
+Se envia 5840.0 de PAN INTEGRAL en el dia 4
+Se envia 9125.0 de YOGURT en el dia 4
+Se envia 2139.0 de QUESILLO en el dia 4
+Se envia 20251.0 de CHOCLO en el dia 5
 Se envia 14243.0 de FIDEOS en el dia 5
-Se envia 2139.0 de QUESILLO en el dia 5
 Se envia 31062.0 de TOMATE en el dia 6
-Se envia 20251.0 de CHOCLO en el dia 6
 Se envia 73.0 de GARBANZOS en el dia 6
+Se envia 5840.0 de PAN INTEGRAL en el dia 6
 Se envia 10806.0 de LIMON en el dia 7
-Se envia 19462.0 de MANZANA en el dia 7
-Se envia 5840.0 de PAN INTEGRAL en el dia 7
+Se envia 19462.0 de MANZANA en el dia 8
+Se envia 10806.0 de LIMON en el dia 9
 Se envia 31062.0 de TOMATE en el dia 10
-Se envia 19462.0 de MANZANA en el dia 10
+Se envia 30931.0 de PERA en el dia 10
+Se envia 1942.0 de QUESO LAMINADO en el dia 10
+Se envia 18250.0 de YOGURT en el dia 10
 Se envia 14243.0 de FIDEOS en el dia 10
-Se envia 10806.0 de LIMON en el dia 11
-Se envia 30931.0 de PERA en el dia 11
-Se envia 18250.0 de YOGURT en el dia 11
 Se envia 7936.0 de PAPAS en el dia 11
 Se envia 7019.0 de ZANAHORIA en el dia 12
 Se envia 5840.0 de PAN INTEGRAL en el dia 12
 Se envia 3519.0 de HUEVO en el dia 12
+Se envia 11987.0 de CEBOLLA en el dia 12
+Se envia 9125.0 de YOGURT en el dia 12
 Se envia 6213.0 de ZAPALLO ITALIANO en el dia 12
 Se envia 31062.0 de TOMATE en el dia 13
 Se envia 19462.0 de MANZANA en el dia 13
+Se envia 5840.0 de PAN INTEGRAL en el dia 13
 Se envia 18250.0 de LECHE BLANCA en el dia 13
 Se envia 18688.0 de PAN BLANCO en el dia 13
-Se envia 1942.0 de QUESO LAMINADO en el dia 13
-Se envia 11987.0 de CEBOLLA en el dia 13
-Se envia 5840.0 de PAN INTEGRAL en el dia 14
 Se envia 3519.0 de HUEVO en el dia 14
+Se envia 38924.0 de MANZANA en el dia 15
+Se envia 14243.0 de FIDEOS en el dia 16
 Se envia 10806.0 de LIMON en el dia 17
-Se envia 19462.0 de MANZANA en el dia 17
 Se envia 3519.0 de HUEVO en el dia 17
-Se envia 9125.0 de YOGURT en el dia 17
-Se envia 14243.0 de FIDEOS en el dia 17
+Se envia 11987.0 de CEBOLLA en el dia 17
+Se envia 10806.0 de LIMON en el dia 18
 Se envia 31062.0 de TOMATE en el dia 18
-Se envia 19462.0 de MANZANA en el dia 18
+Se envia 5840.0 de PAN INTEGRAL en el dia 18
 Se envia 18688.0 de PAN BLANCO en el dia 18
 Se envia 1942.0 de QUESO LAMINADO en el dia 18
-Se envia 11987.0 de CEBOLLA en el dia 18
+Se envia 7994.0 de MANDARINAS en el dia 18
 Se envia 7019.0 de ZANAHORIA en el dia 19
 Se envia 31062.0 de TOMATE en el dia 20
 Se envia 9125.0 de YOGURT en el dia 20
 Se envia 4563.0 de FRUTOS SECOS en el dia 20
-Se envia 7994.0 de MANDARINAS en el dia 20
-Se envia 10806.0 de LIMON en el dia 21
 Se envia 19462.0 de MANZANA en el dia 21
-Se envia 5840.0 de PAN INTEGRAL en el dia 21
 Se envia 3519.0 de HUEVO en el dia 21
 Se envia 14243.0 de FIDEOS en el dia 21
+Se envia 30931.0 de PERA en el dia 22
+Se envia 31062.0 de TOMATE en el dia 23
+Se envia 19462.0 de MANZANA en el dia 23
+Se envia 18250.0 de YOGURT en el dia 23
 Se envia 10806.0 de LIMON en el dia 24
 Se envia 7019.0 de ZANAHORIA en el dia 24
-Se envia 19462.0 de MANZANA en el dia 24
+Se envia 11680.0 de PAN INTEGRAL en el dia 24
 Se envia 8760.0 de AVENA en el dia 24
-Se envia 9125.0 de YOGURT en el dia 24
-Se envia 31062.0 de TOMATE en el dia 25
-Se envia 30931.0 de PERA en el dia 25
-Se envia 5840.0 de PAN INTEGRAL en el dia 25
+Se envia 10806.0 de LIMON en el dia 25
+Se envia 38924.0 de MANZANA en el dia 25
 Se envia 3519.0 de HUEVO en el dia 25
 Se envia 9125.0 de YOGURT en el dia 25
-Se envia 10806.0 de LIMON en el dia 26
-Se envia 19462.0 de MANZANA en el dia 26
-Se envia 5840.0 de PAN INTEGRAL en el dia 26
+Se envia 2139.0 de QUESILLO en el dia 25
+Se envia 31062.0 de TOMATE en el dia 26
+Se envia 20251.0 de CHOCLO en el dia 26
+Se envia 7019.0 de ZANAHORIA en el dia 26
 Se envia 14243.0 de FIDEOS en el dia 26
-Se envia 2139.0 de QUESILLO en el dia 26
-Se envia 20251.0 de CHOCLO en el dia 27
-Se envia 7019.0 de ZANAHORIA en el dia 27
-Se envia 19462.0 de MANZANA en el dia 27
 Se envia 73.0 de GARBANZOS en el dia 27
-Se envia 9125.0 de YOGURT en el dia 27
-Se envia 31062.0 de TOMATE en el dia 28
 Se envia 8760.0 de AVENA en el dia 28
 Se envia 4563.0 de FRUTOS SECOS en el dia 28
 --------------------
 Colegio: 3
-Se envia 42550.0 de TOMATE en el dia 3
-Se envia 26661.0 de MANZANA en el dia 3
-Se envia 4820.0 de HUEVO en el dia 3
-Se envia 12500.0 de YOGURT en el dia 3
-Se envia 19510.0 de FIDEOS en el dia 3
-Se envia 10950.0 de MANDARINAS en el dia 3
-Se envia 9615.0 de ZANAHORIA en el dia 4
-Se envia 26661.0 de MANZANA en el dia 4
-Se envia 4820.0 de HUEVO en el dia 4
-Se envia 25600.0 de PAN BLANCO en el dia 4
-Se envia 14803.0 de LIMON en el dia 5
-Se envia 42370.0 de PERA en el dia 5
-Se envia 8000.0 de PAN INTEGRAL en el dia 5
-Se envia 12500.0 de YOGURT en el dia 5
-Se envia 19510.0 de FIDEOS en el dia 5
-Se envia 2930.0 de QUESILLO en el dia 5
-Se envia 42550.0 de TOMATE en el dia 6
-Se envia 27740.0 de CHOCLO en el dia 6
-Se envia 100.0 de GARBANZOS en el dia 6
-Se envia 14803.0 de LIMON en el dia 7
-Se envia 26661.0 de MANZANA en el dia 7
-Se envia 8000.0 de PAN INTEGRAL en el dia 7
-Se envia 42550.0 de TOMATE en el dia 10
-Se envia 26661.0 de MANZANA en el dia 10
-Se envia 19510.0 de FIDEOS en el dia 10
-Se envia 14803.0 de LIMON en el dia 11
-Se envia 42370.0 de PERA en el dia 11
-Se envia 25000.0 de YOGURT en el dia 11
+Se envia 127650.0 de TOMATE en el dia 3
+Se envia 106644.0 de MANZANA en el dia 3
+Se envia 33740.0 de HUEVO en el dia 3
+Se envia 112500.0 de YOGURT en el dia 3
+Se envia 117060.0 de FIDEOS en el dia 3
+Se envia 21900.0 de MANDARINAS en el dia 3
+Se envia 48075.0 de ZANAHORIA en el dia 4
+Se envia 76800.0 de PAN BLANCO en el dia 4
+Se envia 103621.0 de LIMON en el dia 5
+Se envia 127110.0 de PERA en el dia 5
+Se envia 56000.0 de PAN INTEGRAL en el dia 5
+Se envia 5860.0 de QUESILLO en el dia 5
+Se envia 55480.0 de CHOCLO en el dia 6
+Se envia 200.0 de GARBANZOS en el dia 6
 Se envia 10870.0 de PAPAS en el dia 11
-Se envia 9615.0 de ZANAHORIA en el dia 12
-Se envia 8000.0 de PAN INTEGRAL en el dia 12
-Se envia 4820.0 de HUEVO en el dia 12
 Se envia 8510.0 de ZAPALLO ITALIANO en el dia 12
-Se envia 42550.0 de TOMATE en el dia 13
-Se envia 26661.0 de MANZANA en el dia 13
+Se envia 127650.0 de TOMATE en el dia 13
+Se envia 106644.0 de MANZANA en el dia 13
 Se envia 25000.0 de LECHE BLANCA en el dia 13
-Se envia 25600.0 de PAN BLANCO en el dia 13
-Se envia 2660.0 de QUESO LAMINADO en el dia 13
-Se envia 16420.0 de CEBOLLA en el dia 13
-Se envia 8000.0 de PAN INTEGRAL en el dia 14
-Se envia 4820.0 de HUEVO en el dia 14
-Se envia 14803.0 de LIMON en el dia 17
-Se envia 26661.0 de MANZANA en el dia 17
-Se envia 4820.0 de HUEVO en el dia 17
-Se envia 12500.0 de YOGURT en el dia 17
-Se envia 19510.0 de FIDEOS en el dia 17
-Se envia 42550.0 de TOMATE en el dia 18
-Se envia 26661.0 de MANZANA en el dia 18
-Se envia 25600.0 de PAN BLANCO en el dia 18
-Se envia 2660.0 de QUESO LAMINADO en el dia 18
-Se envia 16420.0 de CEBOLLA en el dia 18
-Se envia 9615.0 de ZANAHORIA en el dia 19
-Se envia 42550.0 de TOMATE en el dia 20
-Se envia 12500.0 de YOGURT en el dia 20
-Se envia 6250.0 de FRUTOS SECOS en el dia 20
-Se envia 10950.0 de MANDARINAS en el dia 20
-Se envia 14803.0 de LIMON en el dia 21
-Se envia 26661.0 de MANZANA en el dia 21
-Se envia 8000.0 de PAN INTEGRAL en el dia 21
-Se envia 4820.0 de HUEVO en el dia 21
-Se envia 19510.0 de FIDEOS en el dia 21
-Se envia 14803.0 de LIMON en el dia 24
-Se envia 9615.0 de ZANAHORIA en el dia 24
-Se envia 26661.0 de MANZANA en el dia 24
-Se envia 12000.0 de AVENA en el dia 24
-Se envia 12500.0 de YOGURT en el dia 24
-Se envia 42550.0 de TOMATE en el dia 25
-Se envia 42370.0 de PERA en el dia 25
-Se envia 8000.0 de PAN INTEGRAL en el dia 25
-Se envia 4820.0 de HUEVO en el dia 25
-Se envia 12500.0 de YOGURT en el dia 25
-Se envia 14803.0 de LIMON en el dia 26
-Se envia 26661.0 de MANZANA en el dia 26
-Se envia 8000.0 de PAN INTEGRAL en el dia 26
-Se envia 19510.0 de FIDEOS en el dia 26
-Se envia 2930.0 de QUESILLO en el dia 26
-Se envia 27740.0 de CHOCLO en el dia 27
-Se envia 9615.0 de ZANAHORIA en el dia 27
-Se envia 26661.0 de MANZANA en el dia 27
-Se envia 100.0 de GARBANZOS en el dia 27
-Se envia 12500.0 de YOGURT en el dia 27
-Se envia 42550.0 de TOMATE en el dia 28
-Se envia 12000.0 de AVENA en el dia 28
-Se envia 6250.0 de FRUTOS SECOS en el dia 28
+Se envia 5320.0 de QUESO LAMINADO en el dia 13
+Se envia 32840.0 de CEBOLLA en el dia 13
+Se envia 12500.0 de FRUTOS SECOS en el dia 20
+Se envia 79983.0 de MANZANA en el dia 24
+Se envia 24000.0 de AVENA en el dia 24
+Se envia 85100.0 de TOMATE en el dia 25
 --------------------
 Colegio: 4
+Se envia 8077.0 de ZANAHORIA en el dia 2
+Se envia 8098.0 de HUEVO en el dia 2
+Se envia 16389.0 de FIDEOS en el dia 2
+Se envia 9198.0 de MANDARINAS en el dia 2
 Se envia 35742.0 de TOMATE en el dia 3
-Se envia 22395.0 de MANZANA en el dia 3
-Se envia 4049.0 de HUEVO en el dia 3
+Se envia 44790.0 de MANZANA en el dia 3
+Se envia 21504.0 de PAN BLANCO en el dia 3
 Se envia 10500.0 de YOGURT en el dia 3
-Se envia 16389.0 de FIDEOS en el dia 3
-Se envia 9198.0 de MANDARINAS en el dia 3
-Se envia 8077.0 de ZANAHORIA en el dia 4
+Se envia 12434.0 de LIMON en el dia 4
+Se envia 35591.0 de PERA en el dia 4
 Se envia 22395.0 de MANZANA en el dia 4
-Se envia 4049.0 de HUEVO en el dia 4
-Se envia 21504.0 de PAN BLANCO en el dia 4
-Se envia 12434.0 de LIMON en el dia 5
-Se envia 35591.0 de PERA en el dia 5
-Se envia 6720.0 de PAN INTEGRAL en el dia 5
-Se envia 10500.0 de YOGURT en el dia 5
+Se envia 6720.0 de PAN INTEGRAL en el dia 4
+Se envia 10500.0 de YOGURT en el dia 4
+Se envia 2462.0 de QUESILLO en el dia 4
+Se envia 23302.0 de CHOCLO en el dia 5
 Se envia 16389.0 de FIDEOS en el dia 5
-Se envia 2462.0 de QUESILLO en el dia 5
 Se envia 35742.0 de TOMATE en el dia 6
-Se envia 23302.0 de CHOCLO en el dia 6
 Se envia 84.0 de GARBANZOS en el dia 6
+Se envia 6720.0 de PAN INTEGRAL en el dia 6
 Se envia 12434.0 de LIMON en el dia 7
-Se envia 22395.0 de MANZANA en el dia 7
-Se envia 6720.0 de PAN INTEGRAL en el dia 7
+Se envia 22395.0 de MANZANA en el dia 8
+Se envia 12434.0 de LIMON en el dia 9
 Se envia 35742.0 de TOMATE en el dia 10
-Se envia 22395.0 de MANZANA en el dia 10
+Se envia 35591.0 de PERA en el dia 10
+Se envia 2235.0 de QUESO LAMINADO en el dia 10
+Se envia 21000.0 de YOGURT en el dia 10
 Se envia 16389.0 de FIDEOS en el dia 10
-Se envia 12434.0 de LIMON en el dia 11
-Se envia 35591.0 de PERA en el dia 11
-Se envia 21000.0 de YOGURT en el dia 11
 Se envia 9131.0 de PAPAS en el dia 11
 Se envia 8077.0 de ZANAHORIA en el dia 12
 Se envia 6720.0 de PAN INTEGRAL en el dia 12
 Se envia 4049.0 de HUEVO en el dia 12
+Se envia 13793.0 de CEBOLLA en el dia 12
+Se envia 10500.0 de YOGURT en el dia 12
 Se envia 7149.0 de ZAPALLO ITALIANO en el dia 12
 Se envia 35742.0 de TOMATE en el dia 13
 Se envia 22395.0 de MANZANA en el dia 13
+Se envia 6720.0 de PAN INTEGRAL en el dia 13
 Se envia 21000.0 de LECHE BLANCA en el dia 13
 Se envia 21504.0 de PAN BLANCO en el dia 13
-Se envia 2235.0 de QUESO LAMINADO en el dia 13
-Se envia 13793.0 de CEBOLLA en el dia 13
-Se envia 6720.0 de PAN INTEGRAL en el dia 14
 Se envia 4049.0 de HUEVO en el dia 14
+Se envia 44790.0 de MANZANA en el dia 15
+Se envia 16389.0 de FIDEOS en el dia 16
 Se envia 12434.0 de LIMON en el dia 17
-Se envia 22395.0 de MANZANA en el dia 17
 Se envia 4049.0 de HUEVO en el dia 17
-Se envia 10500.0 de YOGURT en el dia 17
-Se envia 16389.0 de FIDEOS en el dia 17
+Se envia 13793.0 de CEBOLLA en el dia 17
+Se envia 12434.0 de LIMON en el dia 18
 Se envia 35742.0 de TOMATE en el dia 18
-Se envia 22395.0 de MANZANA en el dia 18
+Se envia 6720.0 de PAN INTEGRAL en el dia 18
 Se envia 21504.0 de PAN BLANCO en el dia 18
 Se envia 2235.0 de QUESO LAMINADO en el dia 18
-Se envia 13793.0 de CEBOLLA en el dia 18
+Se envia 9198.0 de MANDARINAS en el dia 18
 Se envia 8077.0 de ZANAHORIA en el dia 19
 Se envia 35742.0 de TOMATE en el dia 20
 Se envia 10500.0 de YOGURT en el dia 20
 Se envia 5250.0 de FRUTOS SECOS en el dia 20
-Se envia 9198.0 de MANDARINAS en el dia 20
-Se envia 12434.0 de LIMON en el dia 21
 Se envia 22395.0 de MANZANA en el dia 21
-Se envia 6720.0 de PAN INTEGRAL en el dia 21
 Se envia 4049.0 de HUEVO en el dia 21
 Se envia 16389.0 de FIDEOS en el dia 21
+Se envia 35591.0 de PERA en el dia 22
+Se envia 35742.0 de TOMATE en el dia 23
+Se envia 22395.0 de MANZANA en el dia 23
+Se envia 21000.0 de YOGURT en el dia 23
 Se envia 12434.0 de LIMON en el dia 24
 Se envia 8077.0 de ZANAHORIA en el dia 24
-Se envia 22395.0 de MANZANA en el dia 24
+Se envia 13440.0 de PAN INTEGRAL en el dia 24
 Se envia 10080.0 de AVENA en el dia 24
-Se envia 10500.0 de YOGURT en el dia 24
-Se envia 35742.0 de TOMATE en el dia 25
-Se envia 35591.0 de PERA en el dia 25
-Se envia 6720.0 de PAN INTEGRAL en el dia 25
+Se envia 12434.0 de LIMON en el dia 25
+Se envia 44790.0 de MANZANA en el dia 25
 Se envia 4049.0 de HUEVO en el dia 25
 Se envia 10500.0 de YOGURT en el dia 25
-Se envia 12434.0 de LIMON en el dia 26
-Se envia 22395.0 de MANZANA en el dia 26
-Se envia 6720.0 de PAN INTEGRAL en el dia 26
+Se envia 2462.0 de QUESILLO en el dia 25
+Se envia 35742.0 de TOMATE en el dia 26
+Se envia 23302.0 de CHOCLO en el dia 26
+Se envia 8077.0 de ZANAHORIA en el dia 26
 Se envia 16389.0 de FIDEOS en el dia 26
-Se envia 2462.0 de QUESILLO en el dia 26
-Se envia 23302.0 de CHOCLO en el dia 27
-Se envia 8077.0 de ZANAHORIA en el dia 27
-Se envia 22395.0 de MANZANA en el dia 27
 Se envia 84.0 de GARBANZOS en el dia 27
-Se envia 10500.0 de YOGURT en el dia 27
-Se envia 35742.0 de TOMATE en el dia 28
 Se envia 10080.0 de AVENA en el dia 28
 Se envia 5250.0 de FRUTOS SECOS en el dia 28
 --------------------
 Colegio: 5
+Se envia 15000.0 de ZANAHORIA en el dia 2
+Se envia 15040.0 de HUEVO en el dia 2
+Se envia 30436.0 de FIDEOS en el dia 2
+Se envia 17082.0 de MANDARINAS en el dia 2
 Se envia 66378.0 de TOMATE en el dia 3
-Se envia 41590.0 de MANZANA en el dia 3
-Se envia 7520.0 de HUEVO en el dia 3
+Se envia 83180.0 de MANZANA en el dia 3
+Se envia 39936.0 de PAN BLANCO en el dia 3
 Se envia 19500.0 de YOGURT en el dia 3
-Se envia 30436.0 de FIDEOS en el dia 3
-Se envia 17082.0 de MANDARINAS en el dia 3
-Se envia 15000.0 de ZANAHORIA en el dia 4
+Se envia 23092.0 de LIMON en el dia 4
+Se envia 66098.0 de PERA en el dia 4
 Se envia 41590.0 de MANZANA en el dia 4
-Se envia 7520.0 de HUEVO en el dia 4
-Se envia 39936.0 de PAN BLANCO en el dia 4
-Se envia 23092.0 de LIMON en el dia 5
-Se envia 66098.0 de PERA en el dia 5
-Se envia 12480.0 de PAN INTEGRAL en el dia 5
-Se envia 19500.0 de YOGURT en el dia 5
+Se envia 12480.0 de PAN INTEGRAL en el dia 4
+Se envia 19500.0 de YOGURT en el dia 4
+Se envia 4571.0 de QUESILLO en el dia 4
+Se envia 43275.0 de CHOCLO en el dia 5
 Se envia 30436.0 de FIDEOS en el dia 5
-Se envia 4571.0 de QUESILLO en el dia 5
 Se envia 66378.0 de TOMATE en el dia 6
-Se envia 43275.0 de CHOCLO en el dia 6
 Se envia 156.0 de GARBANZOS en el dia 6
+Se envia 12480.0 de PAN INTEGRAL en el dia 6
 Se envia 23092.0 de LIMON en el dia 7
-Se envia 41590.0 de MANZANA en el dia 7
-Se envia 12480.0 de PAN INTEGRAL en el dia 7
+Se envia 41590.0 de MANZANA en el dia 8
+Se envia 23092.0 de LIMON en el dia 9
 Se envia 66378.0 de TOMATE en el dia 10
-Se envia 41590.0 de MANZANA en el dia 10
+Se envia 66098.0 de PERA en el dia 10
+Se envia 4150.0 de QUESO LAMINADO en el dia 10
+Se envia 39000.0 de YOGURT en el dia 10
 Se envia 30436.0 de FIDEOS en el dia 10
-Se envia 23092.0 de LIMON en el dia 11
-Se envia 66098.0 de PERA en el dia 11
-Se envia 39000.0 de YOGURT en el dia 11
 Se envia 16958.0 de PAPAS en el dia 11
 Se envia 15000.0 de ZANAHORIA en el dia 12
 Se envia 12480.0 de PAN INTEGRAL en el dia 12
 Se envia 7520.0 de HUEVO en el dia 12
+Se envia 25616.0 de CEBOLLA en el dia 12
+Se envia 19500.0 de YOGURT en el dia 12
 Se envia 13276.0 de ZAPALLO ITALIANO en el dia 12
 Se envia 66378.0 de TOMATE en el dia 13
 Se envia 41590.0 de MANZANA en el dia 13
+Se envia 12480.0 de PAN INTEGRAL en el dia 13
 Se envia 39000.0 de LECHE BLANCA en el dia 13
 Se envia 39936.0 de PAN BLANCO en el dia 13
-Se envia 4150.0 de QUESO LAMINADO en el dia 13
-Se envia 25616.0 de CEBOLLA en el dia 13
-Se envia 12480.0 de PAN INTEGRAL en el dia 14
 Se envia 7520.0 de HUEVO en el dia 14
+Se envia 83180.0 de MANZANA en el dia 15
+Se envia 30436.0 de FIDEOS en el dia 16
 Se envia 23092.0 de LIMON en el dia 17
-Se envia 41590.0 de MANZANA en el dia 17
 Se envia 7520.0 de HUEVO en el dia 17
-Se envia 19500.0 de YOGURT en el dia 17
-Se envia 30436.0 de FIDEOS en el dia 17
+Se envia 25616.0 de CEBOLLA en el dia 17
+Se envia 23092.0 de LIMON en el dia 18
 Se envia 66378.0 de TOMATE en el dia 18
-Se envia 41590.0 de MANZANA en el dia 18
+Se envia 12480.0 de PAN INTEGRAL en el dia 18
 Se envia 39936.0 de PAN BLANCO en el dia 18
 Se envia 4150.0 de QUESO LAMINADO en el dia 18
-Se envia 25616.0 de CEBOLLA en el dia 18
+Se envia 17082.0 de MANDARINAS en el dia 18
 Se envia 15000.0 de ZANAHORIA en el dia 19
 Se envia 66378.0 de TOMATE en el dia 20
 Se envia 19500.0 de YOGURT en el dia 20
 Se envia 9750.0 de FRUTOS SECOS en el dia 20
-Se envia 17082.0 de MANDARINAS en el dia 20
-Se envia 23092.0 de LIMON en el dia 21
 Se envia 41590.0 de MANZANA en el dia 21
-Se envia 12480.0 de PAN INTEGRAL en el dia 21
 Se envia 7520.0 de HUEVO en el dia 21
 Se envia 30436.0 de FIDEOS en el dia 21
+Se envia 66098.0 de PERA en el dia 22
+Se envia 66378.0 de TOMATE en el dia 23
+Se envia 41590.0 de MANZANA en el dia 23
+Se envia 39000.0 de YOGURT en el dia 23
 Se envia 23092.0 de LIMON en el dia 24
 Se envia 15000.0 de ZANAHORIA en el dia 24
-Se envia 41590.0 de MANZANA en el dia 24
+Se envia 24960.0 de PAN INTEGRAL en el dia 24
 Se envia 18720.0 de AVENA en el dia 24
-Se envia 19500.0 de YOGURT en el dia 24
-Se envia 66378.0 de TOMATE en el dia 25
-Se envia 66098.0 de PERA en el dia 25
-Se envia 12480.0 de PAN INTEGRAL en el dia 25
+Se envia 23092.0 de LIMON en el dia 25
+Se envia 83180.0 de MANZANA en el dia 25
 Se envia 7520.0 de HUEVO en el dia 25
 Se envia 19500.0 de YOGURT en el dia 25
-Se envia 23092.0 de LIMON en el dia 26
-Se envia 41590.0 de MANZANA en el dia 26
-Se envia 12480.0 de PAN INTEGRAL en el dia 26
+Se envia 4571.0 de QUESILLO en el dia 25
+Se envia 66378.0 de TOMATE en el dia 26
+Se envia 43275.0 de CHOCLO en el dia 26
+Se envia 15000.0 de ZANAHORIA en el dia 26
 Se envia 30436.0 de FIDEOS en el dia 26
-Se envia 4571.0 de QUESILLO en el dia 26
-Se envia 43275.0 de CHOCLO en el dia 27
-Se envia 15000.0 de ZANAHORIA en el dia 27
-Se envia 41590.0 de MANZANA en el dia 27
 Se envia 156.0 de GARBANZOS en el dia 27
-Se envia 19500.0 de YOGURT en el dia 27
-Se envia 66378.0 de TOMATE en el dia 28
 Se envia 18720.0 de AVENA en el dia 28
 Se envia 9750.0 de FRUTOS SECOS en el dia 28
 --------------------
