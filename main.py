@@ -7,12 +7,12 @@ if __name__ == '__main__':
         'feeding_schedule.csv', 'foods.csv', 'schools.csv')
 
     # Creamos un numero arbitrariamente grande
-    INF = 10000000000000000000000000000000000000000
+    INF = 1000000000000000
 
     # Definicion de los conjuntos
 
     T = range(0, 32)  # Dias del mes
-    T_V = range(0, 1005)  # Dias de caducidad
+    T_V = range(0, 101)  # Dias de caducidad
     C = range(1, len(df_schools) + 1)  # Colegios
     A = range(1, len(df_foods['ALIMENTO'])+1)  # Alimentos
 
@@ -47,7 +47,7 @@ if __name__ == '__main__':
 
     # Volumen de alimento "a" consumido por el colegio "c" en
     # el día "t"
-    v_a_c_t = {(a, c, t): n_c[c] * v_a[a] * df_fs.loc[t, df_foods.loc[a-1, 'ALIMENTO']]
+    v_a_c_t = {(a, c, t): ceil(n_c[c] * v_a[a] * df_fs.loc[t, df_foods.loc[a-1, 'ALIMENTO']])
                for a in A for c in C for t in T if t > 0}
 
     # Creacion del modelo
@@ -66,7 +66,7 @@ if __name__ == '__main__':
     x_a_c_t = model.addVars(A, C, T, vtype=GRB.BINARY, name='x_a_c_t')
 
     # Variable 3
-    # Volumen del alimento "a" en el colegio "c" al final del dia $t$
+    # Volumen del alimento "a" en el colegio "c" al final del dia "t"
     # que se vence en "t_v" días
     Y_a_c_t_t_v = model.addVars(
         A, C, T, T_V, vtype=GRB.INTEGER, name='Y_a_c_t_t_v')
@@ -76,9 +76,9 @@ if __name__ == '__main__':
     Z_a_c_t = model.addVars(A, C, T, vtype=GRB.INTEGER, name='Z_a_c_t')
 
     # Variable 5
-    # Volumen del alimento $a$ en el colegio $c$ consumido durante el
-    # dia (después del inicio y antes del final) $t$ que se vencía en
-    # $t_v$ días:
+    # Volumen del alimento "a" en el colegio "c" consumido durante el
+    # dia (después del inicio y antes del final) "t" que se vencía en
+    # "t_v" días:
     W_a_c_t_t_v = model.addVars(
         A, C, T, T_V, vtype=GRB.INTEGER, name='W_a_c_t_t_v')
 
@@ -98,11 +98,11 @@ if __name__ == '__main__':
         name='r1')
 
     # Restriccion 2
-    # El volumen del alimento $a$ en el colegio $t$ al final del dia $t$ 
-    # es el volumen al final del dia $(t-1)$ mas el volumen que llego al 
-    # inicio del dia $t$ menos el volumen que se consumió durante el dia 
-    # $t$ menos el volumen que se echa a perder al final del dia $t$, i.e. 
-    # $Y_{a,c,t,0}$
+    # El volumen del alimento "a" en el colegio "c" al final del dia "t" 
+    # es el volumen al final del dia "(t-1)" mas el volumen que llego al 
+    # inicio del dia "t" menos el volumen que se consumió durante el dia 
+    # "t" menos el volumen que se echa a perder al final del dia "t", i.e. 
+    # "Y_{a,c,t,0}"
     model.addConstrs(
         (Z_a_c_t[a, c, t] == Z_a_c_t[a, c, t-1] + X_a_c_t[a, c, t] -
          v_a_c_t[a, c, t] - Y_a_c_t_t_v[a, c, t, 0]
@@ -110,9 +110,9 @@ if __name__ == '__main__':
         name='r2')
 
     # Restriccion 3
-    # El volumen del alimento $a$ en el colegio $t$ al final del dia $t$ 
-    # es la suma de los volúmenes de cada alimento $a$ al final del dia 
-    # $t$ que se vencen en una cantidad de días mayores a $0$:
+    # El volumen del alimento "a" en el colegio "t" al final del dia "t" 
+    # es la suma de los volúmenes de cada alimento "a" al final del dia 
+    # "t" que se vencen en una cantidad de días mayores a "0":
     model.addConstrs(
         (Z_a_c_t[a, c, t] == quicksum(Y_a_c_t_t_v[a, c, t, t_v]
                                       for t_v in T_V if t_v > 0)
@@ -120,29 +120,29 @@ if __name__ == '__main__':
         name='r3')
 
     # Restriccion 4
-    # El volumen del alimento $a$ en el colegio $c$ al final del dia $t$ 
-    # que se vence en $c_a$ dias es igual al alimento $a$ que llego al 
-    # inicio del dia $t$ menos el alimento que se consumió durante el dia 
-    # $t$:
+    # El volumen del alimento "a" en el colegio "c" al final del dia "t" 
+    # que se vence en "c_a" dias es igual al alimento "a" que llego al 
+    # inicio del dia "t" menos el alimento que se consumió durante el dia 
+    # "t":
     model.addConstrs(
-        (Y_a_c_t_t_v[a, c, t, t_v] == X_a_c_t[a, c, t] - W_a_c_t_t_v[a, c, t, t_v]
-         for a in A for c in C for t in T for t_v in T_V if t_v > 0 and t > 0),
+        (Y_a_c_t_t_v[a, c, t, c_a[a]] == X_a_c_t[a, c, t] - W_a_c_t_t_v[a, c, t, t_v]
+         for a in A for c in C for t in T for t_v in T_V if len(T_V) > t_v > 0 and t > 0),
         name='r4')
 
     # Restriccion 5
-    # El volumen del alimento $a$ en el colegio $c$ el dia $t$ que se vence en 
-    # $t_v$ días es igual al volumen del alimento $a$ en el colegio $c$ el dia 
-    # $t-1$ que se vence en $t_v+1$ días menos lo que se consumió de este mismo 
-    # alimento durante el dia $t$
+    # El volumen del alimento "a" en el colegio "c" el dia "t" que se vence en 
+    # "t_v" días es igual al volumen del alimento "a" en el colegio "c" el dia 
+    # "t-1" que se vence en "t_v+1" días menos lo que se consumió de este mismo 
+    # alimento durante el dia "t"
     model.addConstrs(
         (Y_a_c_t_t_v[a, c, t, t_v] == Y_a_c_t_t_v[a, c, t-1, t_v+1] - W_a_c_t_t_v[a, c, t, t_v]
          for a in A for c in C for t in T for t_v in T_V[1:-1] if t > 0),
         name='r5')
 
     # Restriccion 6
-    # El volumen de lo que se consume del alimento $a$ en el colegio $c$ durante el 
-    # dia $t$ es igual a la suma de los volúmenes del alimentos $a$ que se consumen 
-    # en el dia $t$ y que se venían venciendo en $t_v$ días
+    # El volumen de lo que se consume del alimento "a" en el colegio "c" durante el 
+    # dia "t" es igual a la suma de los volúmenes del alimentos "a" que se consumen 
+    # en el dia "t" y que se venían venciendo en "t_v" días
     model.addConstrs(
         (v_a_c_t[a, c, t] == quicksum(W_a_c_t_t_v[a, c, t, t_v]
                                       for t_v in T_V)
@@ -150,8 +150,8 @@ if __name__ == '__main__':
         name='r6')
 
     # Restriccion 7
-    # El volumen del alimento $a$ en el colegio $c$ al final del dia $t$ no debe 
-    # superar  al volumen máximo de almacenaje del colegio $c$
+    # El volumen del alimento "a" en el colegio "c" al final del dia "t" no debe 
+    # superar  al volumen máximo de almacenaje del colegio "c"
     model.addConstrs(
         (Z_a_c_t[a, c, t] <= V_max_c[c]
          for a in A for c in C for t in T),
@@ -181,7 +181,7 @@ if __name__ == '__main__':
     # el tiempo mínimo entre pedidos
     model.addConstrs(
         (quicksum(x_a_c_t[a, c, t2] for t2 in T if t1 <= t2 <= t1 + t_min_c[c]) <= 1
-         for a in A for c in C for t1 in T if 0 < t1 < T[-1] - t_min_c[c]),
+         for a in A for c in C for t1 in T if 0 <= t1 <= T[-1] - t_min_c[c]),
         name='r10')
 
     # Restriccion 11
@@ -234,9 +234,10 @@ if __name__ == '__main__':
 
     # Optimizamos
     model.optimize()
-    # model.computeIIS()
-    # model.setParam('TimeLimit', 5*60)
-    # model.write("model.ilp")
+    
+    #model.computeIIS()
+    #model.setParam('TimeLimit', 5*60)
+    #model.write("model.ilp")
 
     # Imprimimos la solucion
     if model.status == GRB.Status.OPTIMAL:
